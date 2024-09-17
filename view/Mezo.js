@@ -2,7 +2,7 @@ export default class Mezo{
     #index
     #jel
     #szuloElem
-
+    // tudja magarol hogy hanyadik, egyetlen divet jelenit meg, 
     constructor(jel, index, szuloElem){
         this.#jel = jel
         this.#index = index
@@ -23,6 +23,7 @@ export default class Mezo{
     }
 
     gombkattint(){
+        //megmondja hogy eppen melyik elemre kattintottunk 
         this.gombElem.on("click", () => {
             const e = new CustomEvent("kattintas", {detail: this.#index})
             window.dispatchEvent(e)

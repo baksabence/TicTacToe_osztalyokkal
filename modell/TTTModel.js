@@ -8,6 +8,8 @@ export default class TTTModell{
         this.#setAktElem()
     }
 
+    //előállítja (a kovetkezo allapotot) a program aktuális állapotát
+    //
     #setAktElem(){
         if(this.#lepes % 2 === 0){
             this.#aktElem = "X"
@@ -25,10 +27,17 @@ export default class TTTModell{
     }
 
     lepteto(index){
+        // lista indexedik elemere beirja az aktualis elemet, megnoveli a lepest egyel  
         this.#LISTA[index] = this.#aktElem
         this.#lepes++;
         this.#setAktElem()
     }
+
+    ell(){
+        //kiszamolja hogy ki gyozott
+    }
+
+ 
 
 
 }
